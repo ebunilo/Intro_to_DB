@@ -1,12 +1,12 @@
 USE alx_book_store;
 
 CREATE TABLE IF NOT EXISTS Authors (
-    author_id INT PRIMARY KEY AUTO_INCREMENT,
+    author_id INT PRIMARY KEY,
     author_name VARCHAR(215) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS Books (
-    book_id INT PRIMARY KEY AUTO_INCREMENT,
+    book_id INT PRIMARY KEY,
     title VARCHAR(130),
     author_id INT,
     price DOUBLE NOT NULL,
@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS Books (
 );
 
 CREATE TABLE IF NOT EXISTS Customers (
-    customer_id INT PRIMARY KEY AUTO_INCREMENT,
+    customer_id INT PRIMARY KEY,
     customer_name VARCHAR(215) NOT NULL,
     email VARCHAR(215) NOT NULL UNIQUE,
     address TEXT
